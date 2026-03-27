@@ -1,0 +1,201 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Full Page ===== */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Theme Colors ===== */
+:root {
+  --primary: #4f46e5;   /* Indigo */
+  --secondary: #06b6d4; /* Cyan */
+  --accent: #22c55e;    /* Green */
+  --bg-light: #e0f2fe;
+  --bg: #c7d2fe;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+}
+
+/* ===== Background ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--bg), var(--bg-light));
+  color: var(--text-dark);
+}
+
+/* ===== App Layout ===== */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header (FULL WIDTH) ===== */
+.header {
+  width: 100%;
+  background: #cbd5f5;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.header h1 {
+  color: var(--primary);
+  font-size: 28px;
+}
+
+.header p {
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+/* ===== Container FULL WIDTH ===== */
+.container {
+  flex: 1;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Card FULL WIDTH ===== */
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== Toggle Buttons ===== */
+.toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.toggle button {
+  background: #a5b4fc;
+  color: var(--text-dark);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle button:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== Active Toggle (for React active class) ===== */
+.toggle .active {
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== File Input Styling ===== */
+input[type="file"] {
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  border-radius: 8px;
+  border: 1px solid #a5b4fc;
+  padding: 6px 14px;
+  background-color: #e0e7ff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin: 10px 0;
+}
+
+/* Style the file input button */
+input[type="file"]::file-selector-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  margin-right: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #4338ca; /* Darker Indigo */
+}
+
+/* ===== Webcam Video Styling ===== */
+.webcam {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== Preview Image Styling ===== */
+.preview img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+  border: 2px solid #e0e7ff;
+}
+
+/* ===== Buttons General Styling ===== */
+button {
+  padding: 9px 14px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ===== Capture Button Styling ===== */
+.webcam-box button {
+  background: var(--accent);
+  color: white;
+}
+
+.webcam-box button:hover {
+  background: #16a34a; /* Darker green */
+  transform: scale(1.05);
+}
+
+/* ===== Predict Button Styling ===== */
+.predict-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 8px;
+}
+
+.predict-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* ===== Footer ===== */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background: #cbd5f5;
+  color: var(--text-dark);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
